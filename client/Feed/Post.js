@@ -29,7 +29,12 @@ Template.Post.helpers({
 		} else {
 			return true;
 		}
+	},
+
+	comentarios: function() {
+		return Comentarios.find({post: this._id}).fetch();
 	}
+
 });
 
 Template.Post.events({
