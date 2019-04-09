@@ -6,7 +6,9 @@ Meteor.methods({
     		Posts.insert({
       		texto: texto,
      		idDoAutor: Meteor.userId(),
-     		curtidas: []  
+     		curtidas: [],
+     		/* Fora da Aula*/
+     		//descurtidas: []  
     		});
     	}
 	},
@@ -17,5 +19,41 @@ Meteor.methods({
 				curtidas: Meteor.userId()
 			}
 		});
+	},
+	
+	"descurtirPost": function (idDoPost) {
+		Posts.update(idDoPost, {
+			$pull: {
+				curtidas: Meteor.userId()
+			}
+		});
 	}
 });
+
+
+
+
+
+
+
+			/* Fora da Aula*/
+/*
+		if (usuarioCurtiu === true) {
+			Posts.update(idDoPost, {
+				$addToSet: {
+					curtidas: Meteor.userId()
+				}
+			});
+		} else {
+			Posts.update(idDoPost, {
+				$pull: {
+					curtidas: Meteor.userId()
+				}
+			});
+		}
+	},
+*/
+
+
+				
+			
