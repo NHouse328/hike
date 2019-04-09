@@ -5,7 +5,7 @@ Meteor.methods({
     	if(Meteor.userId() !== null) {
     		Posts.insert({
       		texto: texto,
-     		idDoAutor: Meteor.user.Id()  
+     		idDoAutor: Meteor.userId()  
     		});
     	}
 	}

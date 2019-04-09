@@ -1,7 +1,8 @@
 Template.Post.helpers({
-	usarnameDoAutor: function() {
+	usernameDoAutor: function() {
 		var idDoAutor = this.idDoAutor;
 		var autor = Meteor.users.findOne({_id: idDoAutor});
-		return autor.usarname;
+		//console.log(autor.usarname)
+		return autor.username;
 	}
 });
