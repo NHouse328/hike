@@ -24,3 +24,5 @@ kadira:blaze-layout
 twbs:bootstrap
 meteortoys:allthings
 useraccounts:bootstrap
+accounts-password
+useraccounts:flow-routing
