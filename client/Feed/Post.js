@@ -6,3 +6,12 @@ Template.Post.helpers({
 		return autor.username;
 	}
 });
+
+Template.Post.events({
+	"click .like-button": function(evento, template) {
+		console.log("Botão foi clicado");
+		//console.log(template.data._id);
+
+		Meteor.call("curtirPost", template.data._id);
+	}
+});
