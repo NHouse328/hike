@@ -19,10 +19,10 @@ Template.Post.helpers({
 */
 	usuarioCurtiu: function() {
 		var curtidas = this.curtidas;
-		console.log(curtidas);
+		//console.log(curtidas);
 
 		var posicao = curtidas.indexOf(Meteor.userId());
-		console.log(posicao);
+		//console.log(posicao);
 
 		if (posicao === -1) {
 			return false;
