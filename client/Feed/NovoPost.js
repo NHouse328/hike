@@ -1,4 +1,4 @@
-Template.NovoPost.onCreate(function() {
+Template.NovoPost.onCreated(function() {
 	this.urlDaImagem = new ReactiveVar();
 });
 
