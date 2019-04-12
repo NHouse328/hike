@@ -6,6 +6,17 @@
       				<h1>{{username}}</h1>
       				<h4>{{profile.name}}</h4>
       			{{/with}}
+
+            <!--
+              Mostrar numero de seguidores e numero de seguidos !
+            -->
+
+            {{#if segue}}
+              <button class="btn btn-link deixar-de-seguir">Deixar de seguir</button>
+            {{else}}
+              <button class="btn btn-primary seguir">Seguir</button>
+            {{/if}}
+
       		</div>
 
       		<div class="col-md-6">

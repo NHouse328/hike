@@ -26,7 +26,7 @@
             <!--Como muda o id aqui ?-->
 
             {{#if currentUser}} 
-            <li><a href="#" class="perfil"> Perfil</a></li>
+            <li><a href="" class="perfil"> Perfil</a></li>
             {{/if}}
 
           </ul>
@@ -34,6 +34,10 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li>{{>atNavButton}}</li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-brand navbar-right">
+            <p>{{perfil.username}}</p>
           </ul>
 
         </div><!-- /.navbar-collapse -->
