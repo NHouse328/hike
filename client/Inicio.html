@@ -9,14 +9,15 @@
           <p>Acompanhe projetos.</p>
           <p>Compartilhe seus projetos com o mundo.</p>
 
-          {{#if currentUser}}
-            <p><a class="btn btn-primary btn-lg" href="/feed" role="button">Feed</a></p>
-          {{else}}
-            <p><a class="btn btn-primary btn-lg" href="/sign-in" role="button">Entre</a></p>
-          {{/if}}
-
-
+          <!--
+          <p><a class="btn btn-primary btn-lg" href="/sign-in" role="button">Entre</a></p>
+          -->
+          
         </div>
+      </div>
+
+      <div class="col-md-6">
+        {{> atForm state="signUp"}}
       </div>
     </div>
   </div>

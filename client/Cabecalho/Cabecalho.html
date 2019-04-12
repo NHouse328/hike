@@ -29,16 +29,22 @@
             <li><a href="" class="perfil"> Perfil</a></li>
             {{/if}}
 
+            
           </ul>
-          {{> Pesquisa}}
+
+            {{#if currentUser}}
+              {{> Pesquisa}}
+            {{/if}}
 
           <ul class="nav navbar-nav navbar-right">
             <li>{{>atNavButton}}</li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-brand navbar-right">
-            <p>{{perfil.username}}</p>
-          </ul>
+          {{#if currentUser}}
+            <ul class="nav navbar-nav navbar-brand navbar-right">
+              <p>{{perfil.username}}</p>
+            </ul>
+          {{/if}}
 
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
