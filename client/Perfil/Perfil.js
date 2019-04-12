@@ -25,11 +25,21 @@ Template.Perfil.helpers({
 		var posicao = seguidores.indexOf(Meteor.userId());
 		//console.log(posicao);
 
-		if (posicao === -1) {
-			return false;
-		} else {
-			return true;
-		}
+		return posicao !== -1
+
+		//if (posicao === -1) {
+		//	return false;
+		//} else {
+		//	return true;
+		//}
+	},
+
+	euMesmo: function(){
+
+		var idDoUsuario = FlowRouter.getParam("id");
+
+		return idDoUsuario !== Meteor.userId()
+
 	}
 });
 
