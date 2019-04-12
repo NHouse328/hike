@@ -8,8 +8,14 @@
           <h1>Bem-vindo à Hikebook</h1>
           <p>Acompanhe projetos.</p>
           <p>Compartilhe seus projetos com o mundo.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Cadastre-se</a></p>
-        
+
+          {{#if currentUser}}
+            <p><a class="btn btn-primary btn-lg" href="/feed" role="button">Feed</a></p>
+          {{else}}
+            <p><a class="btn btn-primary btn-lg" href="/sign-in" role="button">Entre</a></p>
+          {{/if}}
+
+
         </div>
       </div>
     </div>
