@@ -1,4 +1,12 @@
 
+body{
+  background-color: #efefef;
+}
+
+.btn_seguir{
+  margin-bottom: 20px
+}
+
 .typeahead,
 .tt-query,
 .tt-hint {
@@ -67,8 +75,6 @@
   margin: 0;
 }
 
-body{
-  background-color: #efefef;
-}
+
 
 

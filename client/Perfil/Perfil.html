@@ -7,25 +7,23 @@
       				<h4>{{profile.name}}</h4>
       			{{/with}}
 
+            <div class="btn_seguir">
+              {{#if euMesmo}}  
+                {{#if segue}}
+                  <button class="btn btn-link deixar-de-seguir">Deixar de seguir</button>
+                {{else}}
+                  <button class="btn btn-primary seguir">Seguir</button>
+                {{/if}}
+              {{/if}} 
+            </div>
+
             <p>{{posts.length}} Posts</p>
 
             {{#with perfil}}
               <p>{{profile.seguidores.length}} Seguidores</p>
               <p>{{profile.seguindo.length}} Seguindo</p>
             {{/with}}
-              
-            <!--
-              Mostrar numero de seguidores e numero de seguidos !
-            -->
-
-            {{#if euMesmo}}  
-              {{#if segue}}
-                <button class="btn btn-link deixar-de-seguir">Deixar de seguir</button>
-              {{else}}
-                <button class="btn btn-primary seguir">Seguir</button>
-              {{/if}}
-            {{/if}}  
-
+        
       		</div>
 
       		<div class="col-md-6">
@@ -38,7 +36,7 @@
       			{{#each posts}}
       				{{> Post}}
       			{{/each}}
-            
+
       		</div>
       	</div>
     </div>
