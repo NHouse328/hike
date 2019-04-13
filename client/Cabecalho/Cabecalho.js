@@ -1,8 +1,3 @@
-Template.Cabecalho.onCreated(function() {
-	Meteor.subscribe("usuarios");
-	
-});
-
 Template.Cabecalho.helpers({
 	perfil: function() {
 		var idDoUsuario = Meteor.userId;

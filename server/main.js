@@ -16,12 +16,17 @@ AccountsTemplates.configure({
 });
 
 Meteor.publish("posts", function() {
+
+	return Posts.find();
+
+	/*   Para retornar apenas post dos seguidos
 	var usuario = Meteor.users.findOne({_id: Meteor.userId()});
 	var seguindo = usuario.profile.seguindo;
 	var autores = seguindo;
 	autores.push(Meteor.userId());
 
 	return Posts.find({idDoAutor: {$in: autores}});
+	*/
 });
 
 Meteor.publish("usuarios", function() {
