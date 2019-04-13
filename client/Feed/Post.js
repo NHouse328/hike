@@ -1,5 +1,6 @@
 Template.Post.onCreated(function() {
 	Meteor.subscribe("comentarios", this._id);
+	Meteor.subscribe("posts");
 	Meteor.subscribe("usuarios");
 });
 
@@ -62,7 +63,8 @@ Template.Post.events({
 	},
 
 	"click .botao-remover": function(evento, template) {
-			Meteor.call("removerPost", template.data._id);
+		//console.log(template.data._id);
+		Meteor.call("removerPost", template.data._id);
 	},
 
 	

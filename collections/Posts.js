@@ -31,10 +31,8 @@ Meteor.methods({
 	},
 
 	"removerPost": function(idDoPost) {
-		var post = Posts.findOne({_id, idDoPost});
+		var post = Posts.findOne({_id: idDoPost});
 		var autor = post.idDoAutor;
-
-		console.log(autor);
 
 		if (autor === Meteor.userId()) {
 			Posts.remove(idDoPost);
