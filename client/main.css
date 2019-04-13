@@ -4,7 +4,11 @@ body{
 }
 
 .btn_seguir{
-  margin-bottom: 20px
+  margin-bottom: 20px;
+}
+
+.fa{
+  font-size: 28px;
 }
 
 .typeahead,

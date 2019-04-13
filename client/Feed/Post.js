@@ -33,6 +33,10 @@ Template.Post.helpers({
 
 	comentarios: function() {
 		return Comentarios.find({post: this._id}).fetch();
+	},
+
+	eAutor: function() {
+		return this.idDoAutor === Meteor.userId()
 	}
 
 });
@@ -50,6 +54,10 @@ Template.Post.events({
 		//console.log("Descurtindo");
 
 		Meteor.call("descurtirPost", template.data._id);
+	},
+
+	"click .botao-remover": function(evento, template) {
+			Meteor.call("removerPost", template.data._id);
 	}
 
 });
