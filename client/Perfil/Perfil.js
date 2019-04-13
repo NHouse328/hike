@@ -1,3 +1,8 @@
+Template.Perfil.onCreated(function() {
+	Meteor.subscribe("posts");
+	Meteor.subscribe("usuarios");
+});
+
 Template.Perfil.helpers({
 	perfil: function() {
 		var idDoUsuario = FlowRouter.getParam("id");

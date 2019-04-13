@@ -11,6 +11,14 @@ body{
   font-size: 28px;
 }
 
+.link-usuario{
+  color: black;
+}
+
+.link-usuario:hover{
+  color: black;
+}
+
 .typeahead,
 .tt-query,
 .tt-hint {
